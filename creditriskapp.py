@@ -26,15 +26,21 @@ st.markdown("This project is using data from kaggle about clients who get home l
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Distribution of multiple features with TARGET</p>'
 st.markdown(new_title, unsafe_allow_html=True)
-option5 = st.selectbox('selsect an option' , ['AMT_ANNUITY','AMT_GOODS_PRICE','DAYS_EMPLOYED','DAYS_BIRTH','EXT_SOURCE_1', 'EXT_SOURCE_2', 'EXT_SOURCE_3','CNT_CHILDREN'],key = "tap_sec5")
-t1 = app_train.loc[app_train['TARGET'] != 0]
-t0 = app_train.loc[app_train['TARGET'] == 0]
-fig = plt.figure(figsize=(7,4))
-sns.kdeplot(t1[option5],bw_method=0.05, label="TARGET = 1")
-sns.kdeplot(t0[option5],bw_method=0.05,label="TARGET = 0")
-plt.ylabel('Density plot', fontsize=12)
-plt.legend()
-st.pyplot(fig)
+row3_spacer1, row3_1, row3_spacer2 = st.columns((.2, 7.1, .2))
+with row3_1:
+    option5 = st.selectbox('selsect an option' , ['AMT_ANNUITY','AMT_GOODS_PRICE','DAYS_EMPLOYED','DAYS_BIRTH', 'EXT_SOURCE_2', 'EXT_SOURCE_3','CNT_CHILDREN'],key = "tap_sec5")
+    t1 = app_train.loc[app_train['TARGET'] != 0]
+    t0 = app_train.loc[app_train['TARGET'] == 0]
+    fig = plt.figure(figsize=(7,4))
+    sns.kdeplot(t1[option5],bw_method=0.05, label="TARGET = 1")
+    sns.kdeplot(t0[option5],bw_method=0.05,label="TARGET = 0")
+    plt.ylabel('Density plot', fontsize=12)
+    plt.legend()
+    st.pyplot(fig)
+with row3_2:
+    st.markdown('some numerical features that seems to have relationship to the likelihood of an applicant to repay a loan are:)
+    st.markdown('Loan annuity, the price of the goods for which the loan is given, period for which the client is employed,')
+    st.markdown('normalized score from external data source, and number of children the client has')
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Characteristics of people who not repay their loan</p>'
 st.markdown(new_title, unsafe_allow_html=True)
