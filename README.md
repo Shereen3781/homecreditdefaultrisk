@@ -1,5 +1,4 @@
 homecreditdefaultrisk
-Final Project for Epsilon
 
 Most correlated features:
 ![image](https://github.com/Shereen3781/homecreditdefaultrisk/assets/110721883/20d63ca2-7816-4aae-9338-ff0027956713)
