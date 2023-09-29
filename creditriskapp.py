@@ -45,7 +45,7 @@ with row4_2:
     st.markdown(':blue[Loan annuity,]')
     st.markdown(':blue[The price of the goods for which the loan is given,]')
     st.markdown(':blue[Period for which the client is employed,]')
-    st.markdown(':blue[Normalized score from external data source, and number of children the client has, and]')
+    st.markdown(':blue[Normalized score from external data source, and]')
     st.markdown(':blue[Number of children the client has]')
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Characteristics of people who not repay their loan</p>'
