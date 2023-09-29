@@ -38,9 +38,9 @@ with row4_1:
     plt.legend()
     st.pyplot(fig)
 with row4_2:
-    st.markdown('')
-    st.markdown('')
-    st.markdown('')
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
     st.markdown('Some numerical features that seems to have relationship to the likelihood of an applicant to repay a loan are:')
     st.markdown('Loan annuity,')
     st.markdown('The price of the goods for which the loan is given,')
@@ -100,6 +100,8 @@ plt.xlabel('Features', fontsize=15)
 plt.ylabel('Percent of missing values', fontsize=15)
 plt.title('Percent missing data by feature', fontsize=15)
 st.pyplot(fig)
+st.markdown("It appears there are many applicants who leave blank the information for their housing.\
+Can use the missing data as a feature itself by counting missing values bfeore droping them")
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Most correlated features</p>'
 st.markdown(new_title, unsafe_allow_html=True)
