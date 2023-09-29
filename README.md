@@ -15,4 +15,8 @@ Feature importances:
 
 Random Forest Classifier turned out to the best model with roc_auc_score of 78%.
 
+Two of these features are calculated by me to replace four features,
+DAYS_EMPLOYED_PERCENT represnting the percentage of the days employed relative to the client's age, and
+CREDIT_TERM represnting the length of the payment in months (since the annuity is the monthly amount due
+
 ![image](https://github.com/Shereen3781/homecreditdefaultrisk/assets/110721883/17d2a0a4-fa36-4b76-8088-cf09c7ccb72f)
