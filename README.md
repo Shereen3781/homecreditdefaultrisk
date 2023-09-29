@@ -1,4 +1,6 @@
+
 Home Credit Default Risk
+
 Many people struggle to get loans, however due to insufficient information some untrustworthy lenders tend to be granted loans. This project is using data from kaggle about clients who get home loans. It aims to use of a variety of data to predict clients' repayment abilities. Doing so will ensure that clients capable of repayment are not rejected and that loans are given with a principal, maturity, and repayment calendar that will empower clients to be successful.
 
 
