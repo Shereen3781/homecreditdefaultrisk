@@ -38,6 +38,7 @@ with row4_1:
     plt.legend()
     st.pyplot(fig)
 with row4_2:
+    st.markdown('')
     st.markdown('Some numerical features that seems to have relationship to the likelihood of an applicant to repay a loan are:')
     st.markdown('Loan annuity,')
     st.markdown('The price of the goods for which the loan is given,')
