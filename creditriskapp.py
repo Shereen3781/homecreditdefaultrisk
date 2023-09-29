@@ -24,7 +24,7 @@ st.markdown("This project is using data from kaggle about clients who get home l
     are given with a principal, maturity, and repayment calendar that will empower clients\
     to be successful.")
 
-new_title = '<p style="font-family:sans-serif; color:Blue; font-size: 30px;">Distribution of multiple features with TARGET</p>'
+new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Distribution of multiple features with TARGET</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 row4_spacer1, row4_1, row4_spacer2, row4_2 = st.columns((.2, 7.1, .1, 7))
 with row4_1:
@@ -48,7 +48,7 @@ with row4_2:
     st.markdown(':blue[Normalized score from external data source, and number of children the client has, and]')
     st.markdown(':blue[Number of children the client has]')
 
-new_title = '<p style="font-family:sans-serif; color:Blue; font-size: 30px;">Characteristics of people who not repay their loan</p>'
+new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Characteristics of people who not repay their loan</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 option2 = st.selectbox('selsect an option' , ['NAME_CONTRACT_TYPE','CODE_GENDER','FLAG_OWN_CAR', 'REG_REGION_NOT_LIVE_REGION','NAME_EDUCATION_TYPE'],key = "tap_sec2")
 cat_perc=app_train[[option2, 'TARGET']].groupby([option2],as_index=False).mean().sort_values(by='TARGET', ascending=False)
@@ -87,7 +87,7 @@ st.markdown(":blue[Most of clients have income from Working, followed by Commerc
 Clients with maternity leave have not-repayment rates of almost 40%, followed by Unemployed (37%). The rest of types of incomes have not-repayment rates of 10%.]")
 
 
-new_title = '<p style="font-family:sans-serif; color:Blue; font-size: 30px;">Missing values statistics</p>'
+new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Missing values statistics</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 total = app_train.isnull().sum().sort_values(ascending = False)
 percent = ((app_train.isna().sum()/len(app_train))*100).sort_values(ascending = False)
@@ -103,7 +103,7 @@ st.pyplot(fig)
 st.markdown(":blue[It appears there are many applicants who leave blank the information for their housing.\
 Can use the missing data as a feature itself by counting missing values bfeore droping them.]")
 
-new_title = '<p style="font-family:sans-serif; color:Blue; font-size: 30px;">Most correlated features</p>'
+new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Most correlated features</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 app_train1 = pd.read_csv('app_train.csv')
 numerical_col = app_train1.select_dtypes(exclude = 'O').columns
@@ -114,7 +114,7 @@ sns.heatmap(app_train1[top_corr_features].corr(),annot=True,cmap='Blues', fmt='.
 st.pyplot(fig)
 st.markdown(":blue[Some features are highly correlated so i deleted one of each highly correlated pairs]")
 
-new_title = '<p style="font-family:sans-serif; color:Blue; font-size: 30px;">Feature Importance</p>'
+new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Feature Importance</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 st.markdown(":blue[Random Forest Classifier turned out to the best model with roc_auc_score of 78%. Two of these features are calculated by me to replace four features,]")
 st.markdown(":blue[DAYS_EMPLOYED_PERCENT represnting the percentage of the days employed relative to the client's age, and]")
