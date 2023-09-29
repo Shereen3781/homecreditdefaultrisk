@@ -115,6 +115,9 @@ st.pyplot(fig)
 st.markdown(":blue[Some features are highly correlated ao i deleted one of each highly correlated pairs]")
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Feature Importance</p>'
+st.markdown(":blue[Random Forest Classifier turned out to the best model with roc_auc_score of 78%. Two of these features are calculated by me to replace four features,]")
+st.markdown(":blue[DAYS_EMPLOYED_PERCENT represnting the percentage of the days employed relative to the client's age, and]")
+st.markdown(":blue[CREDIT_TERM represnting the length of the payment in months (since the annuity is the monthly amount due)]")
 st.markdown(new_title, unsafe_allow_html=True)
 features_imp = pd.read_csv('features_imp.csv')
 features_imp1=features_imp.head(10)
