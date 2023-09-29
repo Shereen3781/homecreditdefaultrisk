@@ -18,11 +18,11 @@ with row0_2:
     image = Image.open('about-us-home-credit.jpg')
     st.image(image, width=300)
 
-st.markdown("This project is using data from kaggle about clients who get home loans.\
+st.markdown("blue[This project is using data from kaggle about clients who get home loans.\
     It aims to use of a variety of data to predict clients' repayment abilities.\
     Doing so will ensure that clients capable of repayment are not rejected and that loans\
     are given with a principal, maturity, and repayment calendar that will empower clients\
-    to be successful.")
+    to be successful.]")
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Distribution of multiple features with TARGET</p>'
 st.markdown(new_title, unsafe_allow_html=True)
