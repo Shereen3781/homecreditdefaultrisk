@@ -112,6 +112,7 @@ top_corr_features = corrmat.index[abs(corrmat["TARGET"])>=0.03]
 fig=plt.figure(figsize=(20,10))
 sns.heatmap(app_train1[top_corr_features].corr(),annot=True,cmap='Blues', fmt='.2f')
 st.pyplot(fig)
+ st.markdown(":blue[Some features are highly correlated ao i deleted one of each highly correlated pairs]")
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Feature Importance</p>'
 st.markdown(new_title, unsafe_allow_html=True)
