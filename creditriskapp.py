@@ -26,7 +26,7 @@ st.markdown("This project is using data from kaggle about clients who get home l
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Distribution of multiple features with TARGET</p>'
 st.markdown(new_title, unsafe_allow_html=True)
-row4_spacer1, row4_1, row4_spacer2, row4_2 = st.columns((.2, 7.1, .4, 7))
+row4_spacer1, row4_1, row4_spacer2, row4_2 = st.columns((.2, 7.1, .1, 7))
 with row4_1:
     option5 = st.selectbox('selsect an option' , ['AMT_ANNUITY','AMT_GOODS_PRICE','DAYS_EMPLOYED','DAYS_BIRTH', 'EXT_SOURCE_2', 'EXT_SOURCE_3','CNT_CHILDREN'],key = "tap_sec5")
     t1 = app_train.loc[app_train['TARGET'] != 0]
