@@ -87,7 +87,7 @@ st.markdown(":blue[Most of clients have income from Working, followed by Commerc
 Clients with maternity leave have not-repayment rates of almost 40%, followed by Unemployed (37%). The rest of types of incomes have not-repayment rates of 10%.]")
 
 
-new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Missing values statistics</p>'
+new_title = '<p style="font-family:sans-serif; color:Blue; font-size: 30px;">Missing values statistics</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 total = app_train.isnull().sum().sort_values(ascending = False)
 percent = ((app_train.isna().sum()/len(app_train))*100).sort_values(ascending = False)
@@ -112,7 +112,7 @@ top_corr_features = corrmat.index[abs(corrmat["TARGET"])>=0.03]
 fig=plt.figure(figsize=(20,10))
 sns.heatmap(app_train1[top_corr_features].corr(),annot=True,cmap='Blues', fmt='.2f')
 st.pyplot(fig)
-st.markdown(":blue[Some features are highly correlated ao i deleted one of each highly correlated pairs]")
+st.markdown(":blue[Some features are highly correlated so i deleted one of each highly correlated pairs]")
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Feature Importance</p>'
 st.markdown(new_title, unsafe_allow_html=True)
@@ -122,5 +122,5 @@ st.markdown(":blue[CREDIT_TERM represnting the length of the payment in months (
 features_imp = pd.read_csv('features_imp.csv')
 features_imp1=features_imp.head(10)
 fig=plt.figure(figsize=(12,8))
-sns.barplot(x=features_imp1['Importance'], y=features_imp1['Features'], color="green")
+sns.barplot(x=features_imp1['Importance'], y=features_imp1['Features'], color="blue")
 st.pyplot(fig)
