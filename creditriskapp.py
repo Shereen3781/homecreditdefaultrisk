@@ -59,6 +59,12 @@ s.axhline(global_mean, linewidth=3, color='b')
 plt.text(0, global_mean - 0.01, "global_mean", color='black', weight='semibold')
 st.pyplot(fig)
 
+st.markdown('Revolving loans are just a small fraction from the total number of loans. But compared with their frequency, a larger amount of Revolving loans, are not repaid.')
+st.markdown('The number of female clients is almost double the number of male clients. But, males have a higher chance of not repaying their loans (almost 10%), comparing with women (almost 7%).')
+st.markdown('Client owns a car are almost a half of the ones that doesn't own one. But they have a lower chance of not repaying their loans than the ones that doesn't own a car.')
+st.markdown('Very few people are registered in not live. Generally, not repayment rate is slightly larger for these cases than in the rest.')
+st.markdown('Majority of the clients have Secondary / secondary special education, followed by clients with Higher education. Only a very small number having an academic degree.The Lower secondary category, although rare, have the largest rate of not returning the loan (11%).\
+The people with Academic degree have less than 2% not-repayment rate.')
 
 option3 = st.selectbox('selsect an option' , ['ORGANIZATION_TYPE','NAME_INCOME_TYPE'],key = "tap_sec3")
 cat_perc=app_train[[option3, 'TARGET']].groupby([option3],as_index=False).mean().sort_values(by='TARGET', ascending=False)
@@ -72,6 +78,10 @@ s.axhline(global_mean, linewidth=3, color='b')
 plt.text(0, global_mean - 0.01, "global_mean", color='black', weight='semibold')
 fig.subplots_adjust(hspace =0.6)
 st.pyplot(fig)
+
+st.markdown('Oraganizations with highest percent of loans not repaid are Transport: type 3 (16%), Industry: type 13 (13.5%), Industry: type 8 (12.5%) and Restaurant (less than 12%).')
+st.markdown('Most of clients have income from Working, followed by Commercial associate, Pensioner and State servant.\
+Clients with maternity leave have not-repayment rates of almost 40%, followed by Unemployed (37%). The rest of types of incomes have not-repayment rates of 10%.')
 
 
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">Missing values statistics</p>'
